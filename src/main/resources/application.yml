@@ -1,0 +1,5 @@
+currency_data:
+  url: https://api.apilayer.com/currency_data/live
+  header:
+    key: apikey
+    value: mrMJRaazmNqLVTbxHETaY5QZD05e4x2C
