@@ -7,9 +7,10 @@ import java.util.List;
 @Getter
 public class Exchanges {
 
-    private final List<Exchange> exchanges;
+    private final List<Exchange> elements;
 
     public Exchanges(List<Exchange> exchanges) {
-        this.exchanges = exchanges;
+        this.elements = exchanges;
     }
+
 }

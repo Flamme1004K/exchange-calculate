@@ -1,6 +1,5 @@
 package com.youth.exchange.application;
 
-import com.youth.exchange.domain.exchange.Exchange;
 import com.youth.exchange.domain.exchange.ExchangeRepository;
 import com.youth.exchange.domain.exchange.Exchanges;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +22,7 @@ public class ExchangeScheduler {
     public void exchangeSaveScheduler() {
         log.info("start exchangeSaveScheduler");
         Exchanges recentExchanges = exchangePool.getExchanges();
-        exchangeRepository.saveAll(recentExchanges.getExchanges());
+        exchangeRepository.saveAll(recentExchanges.getElements());
         log.info("ended exchangeSaveScheduler");
     }
 }

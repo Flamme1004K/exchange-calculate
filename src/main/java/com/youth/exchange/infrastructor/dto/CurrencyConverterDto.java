@@ -26,7 +26,7 @@ public class CurrencyConverterDto {
 
         List<Exchange> elements = quotes.entrySet().stream().map(
                 a -> new Exchange(a.getKey(), a.getValue(), renewalTime)
-        ).collect(Collectors.toList());
+        ).collect(Collectors.toUnmodifiableList());
 
         return new Exchanges(elements);
     }
