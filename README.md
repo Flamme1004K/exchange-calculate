@@ -8,3 +8,6 @@
 - [x] CurrencyConverter 의 데이터는 스케줄러를 통하여 디비에 저장한다.
 - [x] Exchanges를 조회 할 수 있도록 한다
 - [x] Exchnages는 최신 환율의 데이터를 기준으로 가지고 올 수 있게 한다.
+- [x] RemittanceAmount는 송금액이다.
+- [x] RemittanceAmount와 Exchange를 통하여 수취금액을 구할 수 있도록 한다.
+- [x] RemittanceAmount는 10000을 넘기면 에러를 발생시키도록 한다.

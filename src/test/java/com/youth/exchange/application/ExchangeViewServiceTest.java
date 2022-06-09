@@ -29,7 +29,7 @@ class ExchangeViewServiceTest {
     @Test
     void 환율_리스트는_최신_목록의_환율_기준으로_불러온다() {
         // given
-        Exchange recentExchange = new Exchange(1L, "USDAED", 3.673197f, LocalDateTime.of(2022, 1, 1, 1, 1, 1));
+        Exchange recentExchange = new Exchange(1L, "USDAED", 3.673197, LocalDateTime.of(2022, 1, 1, 1, 1, 1));
         List<Exchange> recentRenewalExchanges = new ExchangeMock().getRecentRenewalExchanges(recentExchange.getRenewalTime());
 
         // when

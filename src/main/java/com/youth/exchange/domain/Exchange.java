@@ -15,14 +15,14 @@ public class Exchange {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String pair;
-    private Float rate;
+    private Double rate;
     private LocalDateTime renewalTime;
 
-    public Exchange(String pair, Float rate, LocalDateTime renewalTime) {
+    public Exchange(String pair, Double rate, LocalDateTime renewalTime) {
         this(null, pair, rate, renewalTime);
     }
 
-    public Exchange(Long id, String pair, Float rate, LocalDateTime renewalTime) {
+    public Exchange(Long id, String pair, Double rate, LocalDateTime renewalTime) {
         this.id = id;
         this.pair = pair;
         this.rate = rate;

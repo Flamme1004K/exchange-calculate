@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class CurrencyConverterDto {
     private Long timestamp;
     private String source;
-    private Map<String, Float> quotes;
+    private Map<String, Double> quotes;
 
     public Exchanges toExchanges() {
         LocalDateTime renewalTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp), TimeZone.getDefault().toZoneId());
