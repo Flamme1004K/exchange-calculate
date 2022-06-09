@@ -1,5 +1,7 @@
 package com.youth.exchange.domain.exchange;
 
+import com.youth.exchange.domain.Exchange;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;

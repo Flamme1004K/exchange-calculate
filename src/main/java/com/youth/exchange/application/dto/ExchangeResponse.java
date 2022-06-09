@@ -1,7 +1,6 @@
 package com.youth.exchange.application.dto;
 
-import com.youth.exchange.domain.exchange.Exchange;
-import com.youth.exchange.domain.exchange.Exchanges;
+import com.youth.exchange.domain.Exchange;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -16,8 +15,10 @@ public class ExchangeResponse {
     private Float rate;
 
     public static List<ExchangeResponse> of(List<Exchange> exchanges) {
-        return exchanges.stream().map(exchange ->
-                new ExchangeResponse(exchange.getId(), exchange.getPair(), exchange.getRate())
-        ).collect(Collectors.toList());
+        return exchanges.stream().map(ExchangeResponse::of).collect(Collectors.toUnmodifiableList());
+    }
+
+    public static ExchangeResponse of(Exchange exchange) {
+        return new ExchangeResponse(exchange.getId(), exchange.getPair(), exchange.getRate());
     }
 }

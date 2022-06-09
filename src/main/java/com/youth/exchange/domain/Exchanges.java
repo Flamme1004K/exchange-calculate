@@ -1,4 +1,4 @@
-package com.youth.exchange.domain.exchange;
+package com.youth.exchange.domain;
 
 import lombok.Getter;
 

@@ -1,7 +1,7 @@
 package com.youth.exchange.infrastructor.dto;
 
-import com.youth.exchange.domain.exchange.Exchange;
-import com.youth.exchange.domain.exchange.Exchanges;
+import com.youth.exchange.domain.Exchange;
+import com.youth.exchange.domain.Exchanges;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,7 +25,7 @@ public class CurrencyConverterDto {
         LocalDateTime renewalTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp), TimeZone.getDefault().toZoneId());
 
         List<Exchange> elements = quotes.entrySet().stream().map(
-                a -> new Exchange(a.getKey(), a.getValue(), renewalTime)
+                exchange -> new Exchange(exchange.getKey(), exchange.getValue(), renewalTime)
         ).collect(Collectors.toUnmodifiableList());
 
         return new Exchanges(elements);

@@ -1,9 +1,9 @@
 package com.youth.exchange.application;
 
 import com.youth.exchange.application.dto.ExchangeResponse;
-import com.youth.exchange.domain.exchange.Exchange;
+import com.youth.exchange.domain.Exchange;
 import com.youth.exchange.domain.exchange.ExchangeMock;
-import com.youth.exchange.domain.exchange.ExchangeRepository;
+import com.youth.exchange.domain.ExchangeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 

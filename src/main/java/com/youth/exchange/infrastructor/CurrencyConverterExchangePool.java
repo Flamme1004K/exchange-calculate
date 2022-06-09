@@ -1,7 +1,7 @@
 package com.youth.exchange.infrastructor;
 
 import com.youth.exchange.application.ExchangePool;
-import com.youth.exchange.domain.exchange.Exchanges;
+import com.youth.exchange.domain.Exchanges;
 import com.youth.exchange.infrastructor.dto.CurrencyConverterDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

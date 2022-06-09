@@ -1,11 +1,10 @@
-package com.youth.exchange.domain.exchange;
+package com.youth.exchange.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 @Getter
 @Entity

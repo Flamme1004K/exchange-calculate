@@ -1,4 +1,4 @@
-package com.youth.exchange.domain.exchange;
+package com.youth.exchange.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
