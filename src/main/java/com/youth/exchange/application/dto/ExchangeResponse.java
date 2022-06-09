@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class ExchangeResponse {
     private Long id;
     private String pair;
-    private Float rate;
+    private Double rate;
 
     public static List<ExchangeResponse> of(List<Exchange> exchanges) {
         return exchanges.stream().map(ExchangeResponse::of).collect(Collectors.toUnmodifiableList());
