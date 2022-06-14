@@ -8,6 +8,7 @@ import com.youth.exchange.domain.RemittanceAmount;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 
 @Service
@@ -16,10 +17,12 @@ public class CalculateService {
 
     private final ExchangeRepository repository;
 
+    @Transactional
     public CalculateResponse calculate(CalculateRequest request) {
         final Exchange exchange = repository.findById(request.getExchangeId()).orElseThrow(() -> new IllegalArgumentException("해당 환율 내역이 없습니다."));
         RemittanceAmount remittanceAmount = new RemittanceAmount(request.getAmount());
         BigDecimal result = remittanceAmount.changeTo(exchange);
         return new CalculateResponse(result);
     }
+
 }
